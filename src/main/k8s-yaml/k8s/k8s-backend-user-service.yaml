@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+    # 도메인 역할
+    name: k8s-backend-user-service
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+  selector:
+    # 파드의 템플릿 라벨 !! (네임을 직접 이용하지 않음)
+    app: k8s-backend-user

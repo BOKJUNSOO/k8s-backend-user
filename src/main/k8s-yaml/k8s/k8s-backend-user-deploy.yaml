@@ -1,3 +1,4 @@
+# deployment 디스크립터 !!
 apiVersion: apps/v1
 kind: Deployment
 metadata:
