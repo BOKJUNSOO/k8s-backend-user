@@ -1,3 +1,4 @@
+# 단일 파드 디스크립터
 apiVersion: v1
 kind: Pod
 metadata:

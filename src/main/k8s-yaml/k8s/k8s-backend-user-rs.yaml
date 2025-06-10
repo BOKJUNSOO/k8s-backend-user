@@ -1,3 +1,4 @@
+# 리플리카셋 디스크립터
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
