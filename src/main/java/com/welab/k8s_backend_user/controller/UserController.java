@@ -1,6 +1,7 @@
 package com.welab.k8s_backend_user.controller;
 
 import com.welab.k8s_backend_user.common.dto.ApiResponseDto;
+import com.welab.k8s_backend_user.remote.alim.RemoteAlimService;
 import lombok.extern.slf4j.Slf4j;
 
 import lombok.RequiredArgsConstructor;
@@ -12,8 +13,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api/user/v1", produces = MediaType.APPLICATION_JSON_VALUE)
 @RequiredArgsConstructor
 public class UserController {
-    @GetMapping(value = "/test")
+
+    private final RemoteAlimService remoteAlimService;
+
+    @GetMapping(value = "/hello")
     public ApiResponseDto<String> test() {
-        return ApiResponseDto.createOk("welcome to backend user");
+        String remoteMessage = remoteAlimService.hello().getData();
+        String userResponse = "welcome to backend user remote alim message =" + remoteMessage;
+        return ApiResponseDto.createOk(userResponse);
     }
 }
