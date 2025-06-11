@@ -1,5 +1,6 @@
 package com.welab.k8s_backend_user.controller;
 
+import com.welab.k8s_backend_user.common.dto.ApiResponseDto;
 import lombok.extern.slf4j.Slf4j;
 
 import lombok.RequiredArgsConstructor;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class UserController {
     @GetMapping(value = "/test")
-    public String test() {
-        return "Hello Kubernetes";
+    public ApiResponseDto<String> test() {
+        return ApiResponseDto.createOk("welcome to backend user");
     }
 }
