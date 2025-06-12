@@ -2,9 +2,15 @@ package com.welab.k8s_backend_user.domain.event;
 
 
 import com.welab.k8s_backend_user.domain.SiteUser;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 public class SiteUserInfoEvent {
     public static final String Topic ="userinfo";
 
