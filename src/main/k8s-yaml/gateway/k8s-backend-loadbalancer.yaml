@@ -5,7 +5,7 @@ metadata:
 spec:
   type: LoadBalancer # default는 ClusterIp
   selector:
-    app: k8s-backend-gateway # 파드 템플릿 라벨
+    app: k8s-api-gateway # 파드 템플릿 라벨
   ports:
     - protocol: TCP
       port: 8080  # 서비스 포트
