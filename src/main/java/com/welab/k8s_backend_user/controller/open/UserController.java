@@ -1,4 +1,4 @@
-package com.welab.k8s_backend_user.controller;
+package com.welab.k8s_backend_user.controller.open;
 
 import com.welab.k8s_backend_user.common.dto.ApiResponseDto;
 import com.welab.k8s_backend_user.remote.alim.RemoteAlimService;

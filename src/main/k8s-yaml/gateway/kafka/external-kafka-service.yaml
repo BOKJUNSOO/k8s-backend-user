@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-external-kafka-service
+spec:
+  ports:
+    - port: 9092
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: k8s-external-kafka-service
+subsets:
+    - addresses:
+        - ip: # my ip
+      ports:
+        - port: 9092
