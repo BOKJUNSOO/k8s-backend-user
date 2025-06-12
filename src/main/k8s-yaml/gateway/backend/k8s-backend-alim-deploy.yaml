@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: k8s-backend-alim
-        image: solarhc/k8s-backend-alim:0.0.1
+        image: bokjunsoo/k8s-backend-alim:0.0.1
         imagePullPolicy: Always
         env:
         - name: SPRING_PROFILES_ACTIVE

@@ -16,9 +16,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/api/user/v1/auth", produces = MediaType.APPLICATION_JSON_VALUE)@RequiredArgsConstructor
 public class UserAuthController {
+
     private final SiteUserService siteUserService;
+
     @PostMapping(value = "/register")
-    public ApiResponseDto<String> register(@RequestBody @Valid SiteUserRegisterDto registerDto) {siteUserService.registerUser(registerDto);
+    public ApiResponseDto<String> register(@RequestBody @Valid SiteUserRegisterDto registerDto) {
+        siteUserService.registerUser(registerDto);
         return ApiResponseDto.defaultOk();
     }
 }

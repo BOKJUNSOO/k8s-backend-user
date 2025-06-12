@@ -12,6 +12,6 @@ metadata:
   name: k8s-external-kafka-service
 subsets:
     - addresses:
-        - ip: # my ip
+        - ip: 115.137.9.160
       ports:
         - port: 9092
