@@ -33,7 +33,7 @@ spec:
 
           readinessProbe:
             httpGet:
-              path: /backend/user/v1/k8s/readiness
+              path: /backend/user/v1/k8s/readness
               port: 8080
             initialDelaySeconds: 30
             periodSeconds: 5
