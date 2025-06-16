@@ -42,7 +42,8 @@ public class SiteUserService {
         if (user == null) {
             throw new NotFound("사용자를 찾을 수 없습니다.");
         }
-        if( !SecureHashUtils.matches(loginDto.getPassword(), user.getPassword())){throw new BadParameter("비밀번호가 맞지 않습니다.");
+        if( !SecureHashUtils.matches(loginDto.getPassword(), user.getPassword())){
+            throw new BadParameter("비밀번호가 맞지 않습니다.");
         }
         return tokenGenerator.generateAccessRefreshToken(loginDto.getUserId(), "WEB");
     }
