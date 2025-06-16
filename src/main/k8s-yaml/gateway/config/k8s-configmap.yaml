@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: backend-user-config
-data:
-  server.port: "8081"
