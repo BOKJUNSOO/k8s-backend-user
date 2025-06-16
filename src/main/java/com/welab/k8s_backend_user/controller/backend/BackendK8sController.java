@@ -24,8 +24,8 @@ public class BackendK8sController {
         return ApiResponseDto.defaultOk();
     }
 
-    @GetMapping(value="/readness")
-    public ApiResponseDto<String> readness() {
+    @GetMapping(value="/readiness")
+    public ApiResponseDto<String> readiness() {
         probeService.validateReadiness();
 
         return ApiResponseDto.defaultOk();
