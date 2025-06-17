@@ -12,6 +12,6 @@ metadata:
   name: k8s-external-user-mysql-service
 subsets:
   - addresses:
-      - ip: 115.137.9.160
+      - ip: 192.168.0.66
     ports:
       - port: 13306

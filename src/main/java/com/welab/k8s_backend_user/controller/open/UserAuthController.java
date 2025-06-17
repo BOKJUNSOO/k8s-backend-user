@@ -42,4 +42,10 @@ public class UserAuthController {
     public ApiResponseDto<String> test() {
         return ApiResponseDto.createOk("버전 1입니다.");
     }
+
+    // v2 버전 테스트
+    @GetMapping(value = "/test2")
+    public ApiResponseDto<String> test2() {
+        return ApiResponseDto.createOk("버전 2 입니다.");
+    }
 }

@@ -39,7 +39,6 @@ spec:
             periodSeconds: 5
             failureThreshold: 3
             timeoutSeconds: 3
-
           volumeMounts:
             - name: backend-user-config-volume
               mountPath: /etc/config
