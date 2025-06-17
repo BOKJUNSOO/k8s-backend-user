@@ -8,4 +8,5 @@ spec:
       targetPort: 8080
   selector:
     app: k8s-backend-user
-    ver: v7 # blue/green 배포 방식 사용시
+    #ver: v7 # blue/green 배포 방식 사용시
+    # 카나리의 경우는 ver을 삭제
