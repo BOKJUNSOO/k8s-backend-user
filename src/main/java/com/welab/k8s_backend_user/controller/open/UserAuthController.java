@@ -36,16 +36,21 @@ public class UserAuthController {
         TokenDto.AccessToken token = siteUserService.refresh(refreshDto);
         return ApiResponseDto.createOk(token);
     }
-    
-    // 토큰 없이 진입하는 엔드포인트에 테스트 코드 추가
+//
+//    // 토큰 없이 진입하는 엔드포인트에 테스트 코드 추가
+//    @GetMapping(value = "/test")
+//    public ApiResponseDto<String> test() {
+//        return ApiResponseDto.createOk("버전 1입니다.");
+//    }
+//
+//    // v2 버전 테스트
+//    @GetMapping(value = "/test2")
+//    public ApiResponseDto<String> test2() {
+//        return ApiResponseDto.createOk("버전 2 입니다.");
+//    }
+
     @GetMapping(value = "/test")
     public ApiResponseDto<String> test() {
-        return ApiResponseDto.createOk("버전 1입니다.");
-    }
-
-    // v2 버전 테스트
-    @GetMapping(value = "/test2")
-    public ApiResponseDto<String> test2() {
-        return ApiResponseDto.createOk("버전 2 입니다.");
+        return ApiResponseDto.createOk("카나리 버전 입니다.");
     }
 }
